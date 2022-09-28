@@ -2,6 +2,12 @@ en:
   simple_form:
     "yes": 'Yes'
     "no": 'No'
+    placeholders:
+      quote:
+        name: Name of your quote
+    labels:
+      quote:
+        name: Name
     required:
       text: 'required'
       mark: '*'
@@ -29,3 +35,8 @@ en:
     # prompts:
     #   defaults:
     #     age: 'Select your age'
+  helpers:
+    submit:
+      quote:
+        create: Create quote
+        update: Update quote
