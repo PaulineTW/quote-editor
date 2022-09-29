@@ -2,5 +2,11 @@ require "test_helper"
 
 class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
   # Change :chrome with :headless_chrome
-  driven_by :selenium, using: :chrome, screen_size: [1400, 1400]
+  Capybara.configure do |config|
+    config.always_include_port = true
+  end
+
+  driven_by :selenium, using: :headless_chrome do |option|
+    option.add_argument "no-sandbox"
+  end
 end

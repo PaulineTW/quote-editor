@@ -218,7 +218,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-  capybara
+  capybara (>= 3.26)
   cssbundling-rails
   debug
   jbuilder
