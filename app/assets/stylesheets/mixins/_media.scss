@@ -1,0 +1,29 @@
+@mixin media($query) {
+  @if $query == tabletAndUp {
+    @media (min-width: 50rem) { @content; }
+  }
+}
+
+// .my-component {
+//   // The CSS for mobile
+
+//   @include media(tabletAndUp) {
+//     // The CSS for screens bigger than tablets
+//   }
+// }
+
+// .component-1 {
+//   // The CSS for mobile
+
+//   @media (min-width: 50rem) {
+//     // The CSS for screens bigger than 50rem
+//   }
+// }
+
+// .component-2 {
+//   // The CSS for mobile
+
+//   @media (min-width: 50rem) {
+//     // The CSS for screens bigger than 50rem
+//   }
+// }
