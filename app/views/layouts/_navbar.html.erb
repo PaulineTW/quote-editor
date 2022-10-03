@@ -4,7 +4,7 @@
       Company name
     </div>
     <div class="navbar__name">
-      Current user name
+      <%= current_user.name %>
     </div>
     <%= button_to "Sign out",
                   destroy_user_session_path,
