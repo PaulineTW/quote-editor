@@ -44,7 +44,7 @@ class QuotesController < ApplicationController
     @quote.destroy
 
     respond_to do |format|
-      format.html { redirect_to quotes_path, notice: "Quote was successfully destroyed." }
+      format.html { redirect_to quotes_path, notice: "Quote was successfully deleted." }
       format.turbo_stream { flash.now[:notice] = "Quote was successfully destroyed." }
     end
   end
