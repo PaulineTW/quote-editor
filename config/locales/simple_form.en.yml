@@ -40,3 +40,6 @@ en:
       quote:
         create: Create quote
         update: Update quote
+      line_item_date:
+        create: Add date
+        update: Update date
