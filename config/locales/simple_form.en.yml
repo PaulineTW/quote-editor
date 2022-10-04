@@ -8,6 +8,8 @@ en:
     labels:
       quote:
         name: Name
+      line_item_date:
+        date: Date
     required:
       text: 'required'
       mark: '*'
@@ -41,5 +43,5 @@ en:
         create: Create quote
         update: Update quote
       line_item_date:
-        create: Add date
+        create: Create date
         update: Update date
