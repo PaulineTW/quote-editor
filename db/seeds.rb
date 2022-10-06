@@ -21,24 +21,44 @@ puts "======================"
 puts "\n== Seeding the database with seed.rb =="
 
 puts 'Creating 2 fakes companies'
-companies = Company.create([{ name: "Kpmg" }, { name: "PwC" }])
-puts ' 2 companies created!'
+companies = Company.create([{ name: "HandiHand" }, { name: "Helpery" }])
+puts '2 companies created!'
 puts "======================"
 puts"\n"
 
-puts 'Creating accountant user'
+puts 'Creating accountant for HandiHand'
 accountant = User.create!(
-  email: "accountant@kpmg.com",
+  email: "accountant@handihand.com",
   password: 'password',
   company: companies.first
 )
-puts 'accountant user created!'
+puts 'Accountant user at HandiHand created!'
+puts "======================"
+puts"\n"
+
+puts 'Creating manager user for HandiHand'
+accountant = User.create!(
+  email: "manager@handihand.com",
+  password: 'password',
+  company: companies.first
+)
+puts 'Manager user at HandiHand created!'
+puts "======================"
+puts"\n"
+
+puts 'Creating eavesdropper user from other company'
+accountant = User.create!(
+  email: "eavesdropper@helpery.com",
+  password: 'password',
+  company: companies.first
+)
+puts 'Eavesdropper user created for test purpose!'
 puts "======================"
 puts"\n"
 
 puts 'Creating quote sample'
 first = Quote.create!(
-  name: "First quote",
+  name: "Sample quote",
   company: companies.first
 )
 puts 'Quote sample created!'
