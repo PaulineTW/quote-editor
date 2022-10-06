@@ -10,14 +10,21 @@
 # puts "\n== Seeding the database with fixtures =="
 # system("bin/rails db:fixtures:load")
 
+puts 'Delete companies'
+Company.destroy_all
+puts 'Delete users'
+User.destroy_all
+puts 'Delete quotes'
+Quote.destroy_all
+puts "======================"
 
 puts "\n== Seeding the database with seed.rb =="
 
-puts 'Creating kpmg company'
-kpmg = Company.create!(
-  name: "kpmg",
-)
-puts 'Kpmg company created!'
+puts 'Creating 2 fakes companies'
+companies = Company.create([{ name: "Kpmg" }, { name: "PwC" }])
+puts ' 2 companies created!'
+puts "======================"
+puts"\n"
 
 puts 'Creating accountant user'
 accountant = User.create!(
@@ -26,10 +33,12 @@ accountant = User.create!(
   company: companies.first
 )
 puts 'accountant user created!'
+puts "======================"
+puts"\n"
 
 puts 'Creating quote sample'
 first = Quote.create!(
-  name: "First quote"
+  name: "First quote",
   company: companies.first
 )
 puts 'Quote sample created!'
