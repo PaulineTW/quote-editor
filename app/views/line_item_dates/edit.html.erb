@@ -6,6 +6,8 @@
   </div>
 
   <%= turbo_frame_tag dom_id(@line_item_date, :edit) do %>
-    <%= render "form", quote: @quote, line_item_date: @line_item_date %>
+    <%= render "form",
+        quote: @quote,
+        line_item_date: @line_item_date %>
   <% end %>
 </main>
