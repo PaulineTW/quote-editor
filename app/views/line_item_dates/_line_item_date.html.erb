@@ -1,22 +1,25 @@
 <%= turbo_frame_tag line_item_date do %>
   <div class="line-item-date">
-    <div class="line-item-date__header">
-      <h2 class="line-item-date__title">
-        <%= l(line_item_date.date, format: :long) %>
-      </h2>
+    <%= turbo_frame_tag dom_id(line_item_date, :edit) do %>
+      <div class="line-item-date__header">
+        <h2 class="line-item-date__title">
+          <%= l(line_item_date.date, format: :long) %>
+        </h2>
 
-      <div class="line-item-date__actions">
-        <%= button_to "Delete",
-                      quote_line_item_date_path(quote, line_item_date),
-                      method: :delete,
-                      form: { data: { turbo_frame: "_top" } },
+        <div class="line-item-date__actions">
+          <%= button_to "Delete",
+                        quote_line_item_date_path(quote, line_item_date),
+                        method: :delete,
+                        form: { data: { turbo_frame: "_top" } },
+                        class: "btn btn--light" %>
+          <%= link_to "Edit",
+                      [:edit, quote, line_item_date],
+                      data: { turbo_frame: "_top" },
                       class: "btn btn--light" %>
-        <%= link_to "Edit",
-                    [:edit, quote, line_item_date],
-                    data: { turbo_frame: "_top" },
-                    class: "btn btn--light" %>
+        </div>
       </div>
-    </div>
+    <% end %>
+
     <div class="line-item-date__body">
       <div class="line-item line-item--header">
         <div class="line-item__name">Article</div>
@@ -28,7 +31,7 @@
       <%= turbo_frame_tag nested_dom_id(line_item_date, "line_items") do %>
         <%= render line_item_date.line_items, quote: quote, line_item_date: line_item_date %>
       <% end %>
-      
+
       <%= turbo_frame_tag nested_dom_id(line_item_date, LineItem.new) %>
 
       <div class="line-item-date__footer">
