@@ -28,9 +28,10 @@ Project is created with:
 * Rails 7.0.4
 * Redis 5.0.7
 
-- gem "turbo-rails"
-- Devise gem
-- sass
+- gem turbo-rails
+- gem Devise
+- gem stimulus-rails
+- Front: scss
 - Database: PostgreSQL
 - Hosting: Heroku
 	
