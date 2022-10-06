@@ -1,25 +1,74 @@
-# README
+# Quote editor
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Demo [here](https://awesome-quote-editor.herokuapp.com/)
 
-Things you may want to cover:
+Demo Login
+Use the following credentials to explore the app:
+```
+  email: accountant@handihand.com
+  password: password
+```
 
-* Ruby version
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Features](#features)
 
-* System dependencies
 
-* Configuration
+## General info
+Single-page quote editor without having to write a single line of custom JavaScript thanks to Turbo drive, Turbo Frames and Turbo Streams.
+	- all clicks on links and form submissions are now AJAX requests thanks to Turbo Drive.
+  - real-time features with the help of Turbo Streams
+  
+  
+## Technologies
+Project is created with:
+* Ruby 3.1.2
+* Rails 7.0.4
+* Redis 5.0.7
 
-* Database creation
+- gem "turbo-rails"
+- Devise gem
+- sass
+- Database: PostgreSQL
+- Hosting: Heroku
+	
+## Setup
 
-* Database initialization
+Clone the repository
+```
+git git@github.com:PaulineTW/quote-editor.git
+cd quote-editor
+```
 
-* How to run the test suite
+First, install the gems required by the application:
+```
+$ bundle install
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Initialize the database
+```
+$ bin/setup
+```
 
-* Deployment instructions
+Start rails server
+```
+$ bin/dev
+```
 
-* ...
-# quote-editor
+Start Redis server
+```
+$ redis-server
+```
+You can find your app now by pointing your browser to http://localhost:3000. 
+
+
+## Features
+
+- User login
+- CRUD quote
+- CRUD line item date
+- CRUD line item
+- quote total display
+
