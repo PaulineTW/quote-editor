@@ -1,13 +1,8 @@
 # Quote editor
 
-Demo [here](https://awesome-quote-editor.herokuapp.com/)
-
-Demo Login
-Use the following credentials to explore the app:
-```
-  email: accountant@handihand.com
-  password: password
-```
+Single-page quote editor without having to write a single line of custom JavaScript thanks to Turbo drive, Turbo Frames and Turbo Streams.
+- all clicks on links and form submissions are now AJAX requests thanks to Turbo Drive.
+- real-time features with the help of Turbo Streams
 
 ## Table of contents
 * [General info](#general-info)
@@ -17,10 +12,15 @@ Use the following credentials to explore the app:
 
 
 ## General info
-Single-page quote editor without having to write a single line of custom JavaScript thanks to Turbo drive, Turbo Frames and Turbo Streams.
-	- all clicks on links and form submissions are now AJAX requests thanks to Turbo Drive.
-  - real-time features with the help of Turbo Streams
-  
+
+Demo [here](https://awesome-quote-editor.herokuapp.com/)
+
+Demo Login
+Use the following credentials to explore the app:
+```
+  email: accountant@handihand.com
+  password: password
+```
   
 ## Technologies
 Project is created with:
@@ -31,7 +31,8 @@ Project is created with:
 - gem turbo-rails
 - gem Devise
 - gem stimulus-rails
-- Front: scss
+- Test : BDD with Capybara and Selenium
+- Front: Scss, Stumulusjs
 - Database: PostgreSQL
 - Hosting: Heroku
 	
@@ -63,6 +64,12 @@ Start Redis server
 $ redis-server
 ```
 You can find your app now by pointing your browser to http://localhost:3000. 
+
+Run Test
+```
+$ bin/rails test:system
+$ bin/rails test:all
+```
 
 
 ## Features
