@@ -7,9 +7,15 @@
   height: 100vh;
 
   .home-page {
-    padding-left: var(--space-xxxxl);
+    padding-left: var(--space-m);
     padding-top: var(--space-xxxxl);
   }
+
+    @include media(tabletAndUp) {
+      padding-left: var(--space-xxxxl);
+      padding-top: var(--space-xxxxl);
+    }
+
   h1 {
   margin: 0;
   color: white;
