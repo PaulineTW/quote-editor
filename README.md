@@ -31,6 +31,7 @@ Project is created with:
 - gem turbo-rails
 - gem Devise
 - gem stimulus-rails
+- gem simple_form
 - Test : BDD with Capybara and Selenium
 - Front: Scss, Stumulusjs
 - Database: PostgreSQL
@@ -78,5 +79,6 @@ $ bin/rails test:all
 - CRUD quote
 - CRUD line item date
 - CRUD line item
-- quote total display
+- Tuning of disappearing flash-messages
+- Quote total display
 
